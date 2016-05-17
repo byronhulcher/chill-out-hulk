@@ -1,0 +1,253 @@
+<title>Chill Out, Hulk</title>
+<style>
+	body {
+		background-color: #9CCC65;
+		/* Remove space around window edge */
+		margin-top: 0;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 0;
+	  font-family: "Comic Sans MS", "Comic Sans", cursive;
+	}
+
+	/*
+	The attributes below style the css
+	property transitions.
+	*/
+
+	div {
+	  -webkit-transition-property: all;
+	  -webkit-transition-duration: 0.2s;
+	  -webkit-transition-timing-function: ease;
+	  -webkit-transition-delay: 0s;
+	}
+
+	/*
+	The two classes below work together
+	to center the content vertically and
+	horizontally on the screen.
+	*/
+
+	.wrapperOutside {
+	   display: table;
+	   width: 100vw;
+	   height: 100vh;
+	}
+
+	.wrapperInside {
+	   display: table-cell;
+	   text-align: center;
+	   vertical-align: middle;
+	}
+
+	/*
+	The attributes below style the css
+	dialog window, and content.
+	*/
+
+	.dialogContainer {
+	  /* Form */
+	  width: 300px;
+	  height: auto;
+	  /*
+	  Drop Shadow
+	  a. Horizontal shadow
+	  b. Vertical shadow
+	  c. Blur
+	  d. Spread
+	  e. Color
+	  */
+	  -webkit-box-shadow: 0 -2px 25px 0 rgba(0, 0, 0, 0.15), 0 13px 25px 0 rgba(0, 0, 0, 0.3);
+	  background-color: #FFFFFF;
+	  /* Internal padding */
+	  padding-top: 0;
+	  padding-left: 0;
+	  padding-right: 0;
+	  padding-bottom: 0;
+	  /* External padding */
+	  margin-top: 0;
+	  margin-left: auto;
+	  margin-right: auto;
+	  margin-bottom: 0; 
+	}
+
+	.dialogContent { 
+	  /* Form */   
+	  width: auto;
+	  height: auto;
+	  background-color: #FFFFFF;
+	  /* Corner radius */
+	  border-top-left-radius:2px;
+	  border-top-right-radius:2px;
+	  border-bottom-right-radius:0;
+	  border-bottom-left-radius:0;    
+	  /* Internal padding */
+	  padding-top: 21px;
+	  padding-left: 24px;
+	  padding-right: 24px;
+	  padding-bottom: 12px;
+	  /* External padding */
+	  margin-top: 0;
+	  margin-left: 0;
+	  margin-right: 0;
+	  margin-bottom: 0;     
+	}
+
+	.dialogContentTitle {
+	  /* Form */  
+	  background-color: #FFFFFF; 
+	  /* Typography */  
+	  font-family: "Comic Sans MS", "Comic Sans", cursive;
+	  font-weight: 700;
+	  font-size: 20px;
+	  color: rgba(0,0,0,.8);
+	  line-height: 24px;  
+	  text-align: left;
+	  letter-spacing: 0.03px;
+	  /* Internal padding */
+	  padding-top: 0;
+	  padding-left: 0;
+	  padding-right: 0;
+	  padding-bottom: 0;
+	  /* External padding */
+	  margin-top: 0;
+	  margin-left: 0;
+	  margin-right: 0;
+	  margin-bottom: 0;    
+	}
+
+	.dialogContentBody {
+	  /* Typography */
+	  font-family: "Comic Sans MS", "Comic Sans", cursive;
+	  font-weight: 500;
+	  font-size: 16px;
+	  color: rgba(0,0,0,.7);
+	  line-height: 24px;    
+	  text-align: left;
+	  letter-spacing: 0.03px;
+	  /* Internal padding */
+	  padding-top: 14px;
+	  padding-left: 0;
+	  padding-right: 0;
+	  padding-bottom: 0;   
+	  /* External padding */
+	  margin-top: 0;
+	  margin-left: 0;
+	  margin-right: 0;
+	  margin-bottom: 0;       
+	}
+
+	.dialogActionBar {
+	  /* Form */
+	  width: auto;
+	  height: 48px;
+	  background-color: #FFFFFF;
+	  text-align: center;
+	  /* Corner radius */
+	  border-top-left-radius:0;
+	  border-top-right-radius:0;
+	  border-bottom-right-radius:2px;
+	  border-bottom-left-radius:2px;  
+	  /* Internal padding */
+	  padding-top: 0;
+	  padding-left: 16px;
+	  padding-right: 15px;
+	  padding-bottom: 8px;  
+	  /* External padding */
+	  margin-top: 0;
+	  margin-left: 0;
+	  margin-right: 0;
+	  margin-bottom: 0;      
+	}
+
+	/*
+	The attributes below style the
+	hit target.
+	*/
+
+	.buttonTouchTarget {
+	  display: inline-block;
+	  background-color: rgba(0,0,0,0);
+	  /* Remove grey background on link clicked in ios safari */
+	  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	}
+
+	/*
+	The attributes below style the
+	flat button based on the Google
+	material design language.
+	*/
+
+	.buttonFlat {
+	  /* Form */
+	  display: inline-block;
+	  height: 36px;
+	  background-color: rgba(9,9,9,0);
+	  /* Typography */
+	  font-family: "Comic Sans MS", "Comic Sans", cursive;
+	  font-weight: 600;
+	  font-size: 14px;
+	  color:#b76780;
+	  line-height: 36px;    
+	  text-align: center;
+	  letter-spacing: 0.4px;     
+	  /* Internal padding */
+	  padding-top: 0;
+	  padding-left: 10px;
+	  padding-right: 10px;
+	  padding-bottom: 0;
+	  /* External padding – Touch target size */
+	  margin-top: 6px;
+	  margin-left: 4px;
+	  margin-right: 4px;
+	  margin-bottom: 6px;
+	  border-radius: 10px;
+	  font-size:0;
+	  transition: .5s;
+	}
+
+	.buttonFlat:hover {
+	  background-color: #f9dae6;
+	}
+
+	.buttonFlat:active {
+	  background-color:#f9dae6;
+	}
+
+	.buttonFlat::after {
+	  font-weight: 600;
+	  font-size: 16px;
+	  color:#b76780;
+	  line-height: 36px;    
+	  text-align: center;
+	  letter-spacing: 0.4px;     
+	  content: "Drag or right-click here";
+	}
+</style>
+
+<!-- Content wrapper -->
+<div class="wrapperOutside">
+	<div class="wrapperInside">
+		<!-- Dialog -->
+		<div class="dialogContainer">
+			<!-- Dialog title and body -->
+			<div class="dialogContent">
+				<div class="dialogContentTitle">Chill Out, Hulk</div>
+				<div class="dialogContentBody">Either drag the link below to your bookmarks bar or right-click, copy the address, and then create a new bookmark. </div>
+				</div>
+		 			<!-- Dialog action bar -->
+		 			<div class="dialogActionBar">
+				<!-- Buttons -->
+				<a class="buttonTouchTarget" id="buttonOneTouchTarget" title="Chill Out, Hulk" href="javascript:(function()%7B(function()%7B%22use%20strict%22%3Bvar%20e%3Dfunction(e%2Ct)%7Breturn%20t%3Dt%7C%7C%22%22%2Ce.replace(%2F(%5E%7C-)%2Fg%2C%22%241%5C%5Cu%22%2Bt).replace(%2F%2C%2Fg%2C%22%5C%5Cu%22%2Bt)%7D%2Ct%3De(%2220-26%2C28-2F%2C3A-40%2C5B-60%2C7B-7E%2CA0-BF%2CD7%2CF7%22%2C%2200%22)%2Cn%3D%22a-z%22%2Be(%22DF-F6%2CF8-FF%22%2C%2200%22)%2Cr%3D%22A-Z%22%2Be(%22C0-D6%2CD8-DE%22%2C%2200%22)%2Cl%3Dfunction(e%2Cl%2Cp)%7Breturn%20e%3De%7C%7Ct%2Cl%3Dl%7C%7Cn%2Cp%3Dp%7C%7Cr%2C%7Bcapitalize%3Anew%20RegExp(%22(%5E%7C%5B%22%2Be%2B%22%5D)(%5B%22%2Bl%2B%22%5D)%22%2C%22g%22)%2Cpascal%3Anew%20RegExp(%22(%5E%7C%5B%22%2Be%2B%22%5D)%2B(%5B%22%2Bl%2Bp%2B%22%5D)%22%2C%22g%22)%2Cfill%3Anew%20RegExp(%22%5B%22%2Be%2B%22%5D%2B(.%7C%24)%22%2C%22g%22)%2Csentence%3Anew%20RegExp('(%5E%5C%5Cs*%7C%5B%5C%5C%3F%5C%5C!%5C%5C.%5D%2B%22%3F%5C%5Cs%2B%22%3F%7C%2C%5C%5Cs%2B%22)(%5B'%2Bl%2B%22%5D)%22%2C%22g%22)%2Crelax%3Anew%20RegExp(%22(%5B%5E%22%2Bp%2B%22%5D)(%5B%22%2Bp%2B%22%5D*)(%5B%22%2Bp%2B%22%5D)(%3F%3D%5B%22%2Bl%2B%22%5D%7C%24)%22%2C%22g%22)%2Cupper%3Anew%20RegExp(%22%5E%5B%5E%22%2Bl%2B%22%5D%2B%24%22)%2Chole%3A%2F%5B%5E%5Cs%5D%5Cs%5B%5E%5Cs%5D%2F%2Capostrophe%3A%2F'%2Fg%2Croom%3Anew%20RegExp(%22%5B%22%2Be%2B%22%5D%22)%7D%7D%2Cp%3Dl()%2Co%3D%7Bre%3Ap%2Cunicodes%3Ae%2Cregexps%3Al%2Ctypes%3A%5B%5D%2Cup%3AString.prototype.toUpperCase%2Clow%3AString.prototype.toLowerCase%2Ccap%3Afunction(e)%7Breturn%20o.up.call(e.charAt(0))%2Be.slice(1)%7D%2Cfill%3Afunction(e%2Ct)%7Breturn%20e%26%26null!%3Dt%3Fe.replace(p.fill%2Cfunction(e%2Cn)%7Breturn%20n%3Ft%2Bn%3A%22%22%7D)%3Ae%7D%2Cprep%3Afunction(e%2Ct%2Cn%2Cr)%7Bif(!e)return%20e%7C%7C%22%22%3Bif(!r%26%26p.upper.test(e)%26%26(e%3Do.low.call(e))%2C!t%26%26!p.hole.test(e))%7Bvar%20l%3Do.fill(e%2C%22%20%22)%3Bp.hole.test(l)%26%26(e%3Dl)%7Dreturn%20n%7C%7Cp.room.test(e)%7C%7C(e%3De.replace(p.relax%2Co.relax))%2Ce%7D%2Crelax%3Afunction(e%2Ct%2Cn%2Cr)%7Breturn%20t%2B%22%20%22%2B(n%3Fn%2B%22%20%22%3A%22%22)%2Br%7D%7D%2Cc%3D%7B_%3Ao%2Cof%3Afunction(e)%7Bfor(var%20t%3D0%2Cn%3Do.types.length%3Bn%3Et%3Bt%2B%2B)if(c%5Bo.types%5Bt%5D%5D(e)%3D%3D%3De)return%20o.types%5Bt%5D%7D%2Ctype%3Afunction(e%2Ct)%7Bc%5Be%5D%3Dt%2Co.types.push(e)%7D%7D%2Cu%3D%7Blower%3Afunction(e%2Ct)%7Breturn%20o.fill(o.low.call(o.prep(e%2Ct))%2Ct)%7D%2Csentence%3Afunction(e%2Ct)%7Breturn%20e%3Dc.lower(e).replace(p.sentence%2Cfunction(e%2Ct%2Cn)%7Breturn%20t%2Bo.up.call(n)%7D)%2Ct%26%26t.forEach(function(t)%7Be%3De.replace(new%20RegExp(%22%5C%5Cb%22%2Bc.lower(t)%2B%22%5C%5Cb%22%2C%22g%22)%2Co.cap)%7D)%2Ce%7D%7D%3Bfor(var%20a%20in%20u)c.type(a%2Cu%5Ba%5D)%3Bthis.Case%3Dc%7D).call(this)%2C%24(%22.Article-content%20p%22).each(function(e%2Ct)%7Bvar%20n%3D%24(t)%3Bn.html(Case.sentence(n.html()%2C%5B%22Hulk%22%5D))%7D)%7D)()">
+				<div class="buttonFlat" id="buttonOne" fit>Chill Out, Hulk</div>
+				</a><!-- This comment removes 4px gap between buttons
+			</div>
+		</div>
+	</div>
+</div>
+<script src="http://minifiedjs.com/download/minified-web.js">
+<script>
+	$('a').on('click', function(e) {
+	  e.preventDefault();
+	});
+</script>
